@@ -44,3 +44,13 @@ describe('POST /transfer', () => {
         expect(data.txHash).not.toEqual(0);
     })
 })
+describe('POST /exchage', () => {
+    it('open position suscess', async () => {
+      const res = await axios.post('http://localhost:3000/exchangeToken', {
+          wallet_salt: [25, 191, 2, 168, 5, 208, 103, 64, 153, 98, 46, 243, 144, 13, 115, 45, 37, 88, 27, 43, 37, 45, 30, 186, 106, 170, 64, 172, 217, 123, 191, 204],
+          pair : "unibi:unusd",
+          amount: 5,
+
+      })
+    })
+})
